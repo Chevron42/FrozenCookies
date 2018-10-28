@@ -115,8 +115,8 @@ FrozenCookies.preferenceValues = {
         'default':0
     },
     'autoVeil':{
-        'hint':'Automatically turn on the Veil when the next best purchase',
-        'display':['Auto-Veil OFF','Auto-Veil ON'],
+        'hint':'Include the Shimmering Veil when auto-purchasing',
+        'display':['Veil INCLUDED','Veil EXCLUDED'],
         'default':0
     },
     'autoGodzamok':{
@@ -132,7 +132,7 @@ FrozenCookies.preferenceValues = {
     },
     'autoSpell':{
         'hint':'Automatically cast selected spell when your mana is full',
-        'display':["Auto Cast OFF","Cojure Baked Goods","Force the Hand of Fate","Spontaneous Edifice","Haggler's Charm (cheapest)"],
+        'display':["Auto Cast OFF","Conjure Baked Goods","Force the Hand of Fate","Spontaneous Edifice","Haggler's Charm (cheapest)"],
         'default':0,
         'extras':'<a class="option" id="minCpSMult" onclick="updateCpSMultMin(\'minCpSMult\');">x${minCpSMult} minimum Frenzy</a>'
     },

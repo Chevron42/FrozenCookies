@@ -13,7 +13,7 @@
 
 function setOverrides() {
 
-    // Set all cycleable preferencesau
+    // Set all cycleable preferences
     _.keys(FrozenCookies.preferenceValues).forEach(function(preference) {
         FrozenCookies[preference] = preferenceParse(preference, FrozenCookies.preferenceValues[preference].default);
     });
@@ -1180,7 +1180,9 @@ function nextPurchase(recalculate) {
         var target = null;
         for (var i = 0; i < recList.length; i++) {
             target = recList[i];
-            if (target.type == 'upgrade' && unfinishedUpgradePrereqs(Game.UpgradesById[target.id])) {
+	    if (FrozenCookies.autoVeil && (target.id == 562 || target.id == 563 || target.id == 564)) {
+		continue;
+	    } else if (target.type == 'upgrade' && unfinishedUpgradePrereqs(Game.UpgradesById[target.id])) {
                 var prereqList = unfinishedUpgradePrereqs(Game.UpgradesById[target.id]);
                 purchase = recList.filter(function(a) {
                     return prereqList.some(function(b) {
@@ -2036,6 +2038,21 @@ function autoGSBuy() {
     }
 }
 
+function autoVeilBuy() {
+    if (hasClickBuff()) {
+        if (Game.Upgrades['Shimmering veil [off]'].unlocked &&
+            !Game.Upgrades['Shimmering veil [off]'].bought) {
+            Game.Upgrades['Shimmering veil [off]'].buy();
+        }
+    } else if (cpsBonus() <= 1) {
+        if (Game.Upgrades['Shimmering veil [on]'].unlocked &&
+            !Game.Upgrades['Shimmering veil [on]'].bought) {
+            Game.CalculateGains(); // Ensure price is updated since Frenzy ended
+            Game.Upgrades['Shimmering veil [on]'].buy();
+        }
+    }
+}
+
 function autoGodzamokAction() {
     if (!T) return; //Just leave if Pantheon isn't here yet
     //Now has option to not trigger until current Devastation buff expires (i.e. won't rapidly buy & sell cursors throughout Godzamok duration)
@@ -2261,6 +2278,11 @@ function FCStart() {
         clearInterval(FrozenCookies.autoGSBot);
         FrozenCookies.autoGSBot = 0;
     }
+	
+    if (FrozenCookies.autoVeilBot) {
+        clearInterval(FrozenCookies.autoVeilBot);
+        FrozenCookies.autoVeilBot = 0;
+    }
 
     if (FrozenCookies.autoGodzamokBot) {
         clearInterval(FrozenCookies.autoGodzamokBot);
@@ -2297,6 +2319,10 @@ function FCStart() {
 
     if (FrozenCookies.autoGS) {
         FrozenCookies.autoGSBot = setInterval(autoGSBuy, FrozenCookies.frequency)
+    }
+	
+    if (FrozenCookies.autoVeil) {
+        FrozenCookies.autoVeilBot = setInterval(autoVeilBuy, FrozenCookies.frequency)
     }
 
     if (FrozenCookies.autoGodzamok) {
