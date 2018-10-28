@@ -60,7 +60,7 @@ FrozenCookies.preferenceValues = {
     },
     'blacklist':{
         'hint':'Blacklist purchases from the efficiency calculations',
-        'display':['No Blacklist', 'Speedrun Blacklist', 'Hardcore Blacklist', 'Grandmapocalypse Mode', 'No Buildings', 'No Shimmering Veil'],
+        'display':['No Blacklist', 'Speedrun Blacklist', 'Hardcore Blacklist', 'Grandmapocalypse Mode', 'No Buildings'],
         'default':0
     },
 /*  'timeTravelMethod':{
@@ -114,6 +114,11 @@ FrozenCookies.preferenceValues = {
         'display':['Auto-Switch OFF','Auto-Switch ON'],
         'default':0
     },
+    'autoVeil:{
+        'hint':'Disable the Veil from being automatically triggered',
+        'display':['Auto-Switch OFF','Auto-Switch ON'],
+        'default':0
+    },
     'autoGodzamok':{
         'hint':'Automatically sell all cursors during Dragonflight and Click Frenzy if you worship Godzamok ("Sane" prevents rapid buy/sell spam)',
         'display':['Auto-Godzamok OFF','Auto-Godzamok ON','Auto-Godzamok ON (Sane)','Auto-Godzamok (REALLY INSANE)'],
@@ -127,7 +132,7 @@ FrozenCookies.preferenceValues = {
     },
     'autoSpell':{
         'hint':'Automatically cast selected spell when your mana is full',
-        'display':["Auto Cast OFF","Cojure Baked Goods","Force the Hand of Fate","Spontaneous Edifice","Haggler's Charm (cheapest)"],
+        'display':["Auto Cast OFF","Conjure Baked Goods","Force the Hand of Fate","Spontaneous Edifice","Haggler's Charm (cheapest)"],
         'default':0,
         'extras':'<a class="option" id="minCpSMult" onclick="updateCpSMultMin(\'minCpSMult\');">x${minCpSMult} minimum Frenzy</a>'
     },
@@ -443,10 +448,6 @@ var blacklist = [
     {
         'upgrades': [],
         'buildings': true
-    },
-    {
-        'upgrades': [562, 563, 564],
-        'buildings': []
     }
 ];
 
