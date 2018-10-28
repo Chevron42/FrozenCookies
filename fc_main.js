@@ -2039,6 +2039,21 @@ function autoGSBuy() {
     }
 }
 
+function autoVeilBuy() {
+    if (hasClickBuff()) {
+        if (Game.Upgrades['Shimmering veil [off]'].unlocked &&
+            !Game.Upgrades['Shimmering veil [off]'].bought) {
+            Game.Upgrades['Shimmering veil [off]'].buy();
+        }
+    } else if (cpsBonus() <= 1) {
+        if (Game.Upgrades['Shimmering veil [on]'].unlocked &&
+            !Game.Upgrades['Shimmering veil [on]'].bought) {
+            Game.CalculateGains(); // Ensure price is updated since Frenzy ended
+            Game.Upgrades['Shimmering veil [on]'].buy();
+        }
+    }
+}
+
 function autoGodzamokAction() {
     if (!T) return; //Just leave if Pantheon isn't here yet
     //Now has option to not trigger until current Devastation buff expires (i.e. won't rapidly buy & sell cursors throughout Godzamok duration)
@@ -2264,6 +2279,11 @@ function FCStart() {
         clearInterval(FrozenCookies.autoGSBot);
         FrozenCookies.autoGSBot = 0;
     }
+	
+    if (FrozenCookies.autoVeilBot) {
+        clearInterval(FrozenCookies.autoVeilBot);
+        FrozenCookies.autoVeilBot = 0;
+    }
 
     if (FrozenCookies.autoGodzamokBot) {
         clearInterval(FrozenCookies.autoGodzamokBot);
@@ -2300,6 +2320,10 @@ function FCStart() {
 
     if (FrozenCookies.autoGS) {
         FrozenCookies.autoGSBot = setInterval(autoGSBuy, FrozenCookies.frequency)
+    }
+	
+    if (FrozenCookies.autoVeil) {
+        FrozenCookies.autoVeilBot = setInterval(autoVeilBuy, FrozenCookies.frequency)
     }
 
     if (FrozenCookies.autoGodzamok) {
