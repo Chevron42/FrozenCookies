@@ -2041,7 +2041,7 @@ function autoGSBuy() {
 }
 
 function autoVeilBuy() {
-    if (!FrozenCookies.autoVeil) {
+    if (FrozenCookies.autoVeil) {
         if (Game.Upgrades['Shimmering veil [off]'].unlocked &&
             !Game.Upgrades['Shimmering veil [off]'].bought) {
             Game.Upgrades['Shimmering veil [off]'].buy();
