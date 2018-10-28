@@ -114,7 +114,7 @@ FrozenCookies.preferenceValues = {
         'display':['Auto-Switch OFF','Auto-Switch ON'],
         'default':0
     },
-    'autoVeil:{
+    'autoVeil':{
         'hint':'Disable the Veil from being automatically triggered',
         'display':['Auto-Switch OFF','Auto-Switch ON'],
         'default':0
