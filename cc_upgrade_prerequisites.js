@@ -114,6 +114,11 @@ FrozenCookies.preferenceValues = {
         'display':['Auto-Switch OFF','Auto-Switch ON'],
         'default':0
     },
+    'autVeil':{
+        'hint':'Automatically turn on the Veil when the next best purchase',
+        'display':['Auto-Switch OFF','Auto-Switch ON'],
+        'default':0
+    },
     'autoGodzamok':{
         'hint':'Automatically sell all cursors during Dragonflight and Click Frenzy if you worship Godzamok ("Sane" prevents rapid buy/sell spam)',
         'display':['Auto-Godzamok OFF','Auto-Godzamok ON','Auto-Godzamok ON (Sane)','Auto-Godzamok (REALLY INSANE)'],
