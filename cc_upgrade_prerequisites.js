@@ -446,7 +446,7 @@ var blacklist = [
     },
     {
         'upgrades': [562, 563, 564],
-        'buildings': true
+        'buildings': []
     }
 ];
 
