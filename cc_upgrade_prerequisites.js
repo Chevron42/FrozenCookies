@@ -116,7 +116,7 @@ FrozenCookies.preferenceValues = {
     },
     'autoVeil':{
         'hint':'Disable the Veil from being automatically triggered',
-        'display':['Auto-Switch OFF','Auto-Switch ON'],
+        'display':['Auto-Veil OFF','Auto-Veil ON'],
         'default':0
     },
     'autoGodzamok':{
