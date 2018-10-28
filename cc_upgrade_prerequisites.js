@@ -115,8 +115,8 @@ FrozenCookies.preferenceValues = {
         'default':0
     },
     'autoVeil':{
-        'hint':'Disable the Veil from being automatically triggered',
-        'display':['Veil DISABLED','Veil ENABLED'],
+        'hint':'Include the Shimmering Veil when auto-purchasing',
+        'display':['Veil INCLUDED','Veil EXCLUDED'],
         'default':0
     },
     'autoGodzamok':{
