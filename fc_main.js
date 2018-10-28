@@ -1182,8 +1182,7 @@ function nextPurchase(recalculate) {
             target = recList[i];
 	    if (FrozenCookies.autoVeil && (target.id == 562 || target.id == 563 || target.id == 564)) {
 		continue;
-	    }
-            else if (target.type == 'upgrade' && unfinishedUpgradePrereqs(Game.UpgradesById[target.id])) {
+	    } else if (target.type == 'upgrade' && unfinishedUpgradePrereqs(Game.UpgradesById[target.id])) {
                 var prereqList = unfinishedUpgradePrereqs(Game.UpgradesById[target.id]);
                 purchase = recList.filter(function(a) {
                     return prereqList.some(function(b) {
