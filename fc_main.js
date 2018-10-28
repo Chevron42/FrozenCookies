@@ -2039,16 +2039,10 @@ function autoGSBuy() {
 }
 
 function autoVeilBuy() {
-    if (hasClickBuff()) {
+    if (!FrozenCookies.autoVeil) {
         if (Game.Upgrades['Shimmering veil [off]'].unlocked &&
             !Game.Upgrades['Shimmering veil [off]'].bought) {
             Game.Upgrades['Shimmering veil [off]'].buy();
-        }
-    } else if (cpsBonus() <= 1) {
-        if (Game.Upgrades['Shimmering veil [on]'].unlocked &&
-            !Game.Upgrades['Shimmering veil [on]'].bought) {
-            Game.CalculateGains(); // Ensure price is updated since Frenzy ended
-            Game.Upgrades['Shimmering veil [on]'].buy();
         }
     }
 }
