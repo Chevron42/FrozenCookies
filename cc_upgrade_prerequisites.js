@@ -116,8 +116,8 @@ FrozenCookies.preferenceValues = {
     },
     'autoVeil':{
         'hint':'Include the Shimmering Veil when auto-purchasing',
-        'display':['Veil INCLUDED','Veil EXCLUDED'],
-        'default':0
+        'display':['Veil EXCLUDED','Veil INCLUDED'],
+        'default':1
     },
     'autoGodzamok':{
         'hint':'Automatically sell all cursors during Dragonflight and Click Frenzy if you worship Godzamok ("Sane" prevents rapid buy/sell spam)',
