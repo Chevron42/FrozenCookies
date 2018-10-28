@@ -114,9 +114,9 @@ FrozenCookies.preferenceValues = {
         'display':['Auto-Switch OFF','Auto-Switch ON'],
         'default':0
     },
-    'autVeil':{
+    'autoVeil':{
         'hint':'Automatically turn on the Veil when the next best purchase',
-        'display':['Auto-Switch OFF','Auto-Switch ON'],
+        'display':['Auto-Veil OFF','Auto-Veil ON'],
         'default':0
     },
     'autoGodzamok':{
