@@ -1322,7 +1322,11 @@ function isUnavailable(upgrade, upgradeBlacklist) {
     if (upgrade.id == 361) {
         result = true; // blacklist golden cookie sound selector from being used
     }
-
+		
+    if (upgrade.id == 563) {
+        result = true; // blacklist shimmering veil from being used
+    }
+	
     return result;
 }
 
