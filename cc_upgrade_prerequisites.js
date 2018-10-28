@@ -60,7 +60,7 @@ FrozenCookies.preferenceValues = {
     },
     'blacklist':{
         'hint':'Blacklist purchases from the efficiency calculations',
-        'display':['No Blacklist', 'Speedrun Blacklist', 'Hardcore Blacklist', 'Grandmapocalypse Mode', 'No Buildings'],
+        'display':['No Blacklist', 'Speedrun Blacklist', 'Hardcore Blacklist', 'Grandmapocalypse Mode', 'No Buildings', 'No Shimmering Veil'],
         'default':0
     },
 /*  'timeTravelMethod':{
@@ -112,11 +112,6 @@ FrozenCookies.preferenceValues = {
     'autoGS':{
         'hint':'Automatically turn on the Golden Switch during Dragonflight and Click Frenzy',
         'display':['Auto-Switch OFF','Auto-Switch ON'],
-        'default':0
-    },
-    'autoVeil':{
-        'hint':'Disable toggling of the veil?',
-        'display':['Yes', 'No'],
         'default':0
     },
     'autoGodzamok':{
@@ -447,6 +442,10 @@ var blacklist = [
     },
     {
         'upgrades': [],
+        'buildings': true
+    },
+    {
+        'upgrades': [562, 563, 564],
         'buildings': true
     }
 ];
