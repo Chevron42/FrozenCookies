@@ -13,7 +13,7 @@
 
 function setOverrides() {
 
-    // Set all cycleable preferencesau
+    // Set all cycleable preferences
     _.keys(FrozenCookies.preferenceValues).forEach(function(preference) {
         FrozenCookies[preference] = preferenceParse(preference, FrozenCookies.preferenceValues[preference].default);
     });
@@ -1180,7 +1180,10 @@ function nextPurchase(recalculate) {
         var target = null;
         for (var i = 0; i < recList.length; i++) {
             target = recList[i];
-            if (target.type == 'upgrade' && unfinishedUpgradePrereqs(Game.UpgradesById[target.id])) {
+	    if (FrozenCookies.autoVeil && (target.id == 562 || target.id == 563 || target.id == 564)) {
+		continue;
+	    }
+            elseif (target.type == 'upgrade' && unfinishedUpgradePrereqs(Game.UpgradesById[target.id])) {
                 var prereqList = unfinishedUpgradePrereqs(Game.UpgradesById[target.id]);
                 purchase = recList.filter(function(a) {
                     return prereqList.some(function(b) {
