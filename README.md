@@ -38,7 +38,7 @@ What can Frozen Cookies do?
 What's new?
 -----------
 2018 Oct 28:
-- Updated to include/exclude the Shimmering Veil from auto-purchasing
+- Updated to include/exclude the Shimmering Veil from auto-purchasing as a preference option
 
 2018 Mar 2:
 - Updated to work in patch 2.0045
