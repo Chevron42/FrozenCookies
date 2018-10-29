@@ -4,10 +4,10 @@ var scriptElement = document.getElementById('frozenCookieScript') !== null ?
     document.getElementById('modscript_frozen_cookies');
 var baseUrl = scriptElement !== null ?
     scriptElement.getAttribute('src').replace(/\/frozen_cookies\.js$/, '') :
-    'https://rawgit.com/awldickinson/FrozenCookies/';
+    'https://raw.githubusercontent.com/awldickinson/FrozenCookies/';
 var FrozenCookies = {
     'baseUrl': baseUrl,
-    'branch': 'awldickinson',
+    'branch': 'master',
     'version': '2.016'
 };
 
