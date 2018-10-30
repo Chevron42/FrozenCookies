@@ -7,7 +7,7 @@ var baseUrl = scriptElement !== null ?
     'https://raw.githubusercontent.com/awldickinson/FrozenCookies/';
 var FrozenCookies = {
     'baseUrl': baseUrl,
-    'branch': 'master',
+    'tag': '2.016-veil',
     'version': '2.016'
 };
 
@@ -26,9 +26,9 @@ var script_list = [
     '//cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.highlighter.min.js',
     '//cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.logAxisRenderer.min.js',
     '//cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.cursor.min.js',
-    FrozenCookies.baseUrl + '/' + FrozenCookies.branch + '/cc_upgrade_prerequisites.js',
-    FrozenCookies.baseUrl + '/' + FrozenCookies.branch + '/fc_main.js',
-    FrozenCookies.baseUrl + '/' + FrozenCookies.branch + '/fc_button.js'
+    FrozenCookies.baseUrl + '/' + FrozenCookies.tag + '/cc_upgrade_prerequisites.js',
+    FrozenCookies.baseUrl + '/' + FrozenCookies.tag + '/fc_main.js',
+    FrozenCookies.baseUrl + '/' + FrozenCookies.tag + '/fc_button.js'
 ]
 
 FrozenCookies.loadInterval = setInterval(function() {
