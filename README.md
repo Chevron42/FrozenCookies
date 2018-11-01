@@ -5,19 +5,10 @@ An automated Cookie Clicker tool.
 
 How to use
 ----------
+Create a new bookmark with the URL:
+javascript:( function () { Game.LoadMod('https://cdn.jsdelivr.net/gh/awldickinson/FrozenCookies/frozen_cookies.js'); }() );
 
-## Bookmarklet install
-
-1. Paste the *contents* (not the url) of https://rawgit.com/Mezmerro/FrozenCookies/master/fc_bookmarklet_loader.js into a bookmark.
-2. Load up Cookie Clicker.
-3. Load the recently created bookmark.
-
-## Userscript install
-
-0. If you don't already have it, install the required browser add-on. [Tampermonkey (Chrome)](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) or [Greasemonkey (Firefox)](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
-1. Go to https://rawgit.com/Mezmerro/FrozenCookies/master/fc_userscript_loader.user.js
-2. Click the 'install' button in the upper right corner.
-3. Load up Cookie Clicker.
+Open your save of Cookie Clicker then open your bookmark.
 
 What can Frozen Cookies do?
 ---------------------------
@@ -38,7 +29,9 @@ What can Frozen Cookies do?
 What's new?
 -----------
 2018 Oct 28:
+- Updated to work with patch 2.016
 - Updated to include/exclude the Shimmering Veil from auto-purchasing as a preference option
+- Removed Bookmarklet and Userscript files as they hadn't been updated in a long time
 
 2018 Mar 2:
 - Updated to work in patch 2.0045
