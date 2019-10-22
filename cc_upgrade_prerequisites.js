@@ -155,7 +155,7 @@ FrozenCookies.preferenceValues = {
     'drawCircles':{
         'hint':'Draw the circles beneath the cookie?',
         'display':['Draw OFF','Draw ON'],
-        'default':0
+        'default':1
     }
 };
 
