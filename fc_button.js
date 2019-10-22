@@ -418,7 +418,9 @@ function updateTimers() {
     }
     height = $('#backgroundLeftCanvas').height() - 140;
     // Testing to see if I can turn the circles off.
-    //drawCircles(t_draw, 20, height);
+    if(FrozenCookies.preferenceValues[drawCircles]) {
+        drawCircles(t_draw, 20, height);
+    }
 }
 
 function FCMenu() {
