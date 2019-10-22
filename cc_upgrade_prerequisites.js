@@ -151,6 +151,11 @@ FrozenCookies.preferenceValues = {
         'hint':'Season to maintain when no others have needed upgrades',
         'display':['Default Season: None','Default Season: Business Day','Default Season: Christmas','Default Season: Easter','Default Season: Halloween',"Default Season: Valentine's Day"],
         'default':0
+    },
+    'drawCircles':{
+        'hint':'Draw the circles beneath the cookie?',
+        'display':['Draw OFF','Draw ON'],
+        'default':0
     }
 };
 
