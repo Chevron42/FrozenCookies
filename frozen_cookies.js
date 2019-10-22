@@ -7,7 +7,7 @@ var baseUrl = scriptElement !== null ?
     'https://raw.githubusercontent.com/awldickinson/FrozenCookies/';
 var FrozenCookies = {
     'baseUrl': baseUrl,
-    'version': '2.016-veil'
+    'version': '2.022'
 };
 
 // Load external libraries
