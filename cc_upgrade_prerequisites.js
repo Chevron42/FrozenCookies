@@ -153,7 +153,7 @@ FrozenCookies.preferenceValues = {
         'default':0
     },
     'drawCircles':{
-        'hint':'Draw the circles beneath the cookie?',
+        'hint':'Draw the arc circles beneath the cookie',
         'display':['Draw OFF','Draw ON'],
         'default':1
     }
